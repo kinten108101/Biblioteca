@@ -14,7 +14,6 @@ template $Window: Adw.ApplicationWindow {
     condition ("max-width: 850sp")
     setters {
       split_view.collapsed: true;
-      button_sidebar.visible: true;
     }
   }
 
@@ -41,7 +40,6 @@ template $Window: Adw.ApplicationWindow {
             ToggleButton button_sidebar {
               icon-name: "sidebar-show-symbolic";
               tooltip-text: _("Open Sidebar");
-              visible: false;
               active: bind split_view.show-sidebar;
               styles ["flat"]
             }
